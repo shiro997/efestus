@@ -1,6 +1,9 @@
 // Importa Express
 const express = require('express');
 
+//Importar módulos locales
+const db = require('./db/database');
+
 // Crea una instancia de la aplicación
 const app = express();
 
@@ -17,5 +20,9 @@ app.get('/', (req, res) => {
 
 // Inicia el servidor
 app.listen(PORT, () => {
+  //inicia conexión con mongodb
+  db();
+  //indica que el servidor está online
   console.log(`Servidor corriendo en el puerto ${PORT}`);
+
 });
