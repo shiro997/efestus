@@ -10,15 +10,15 @@ const db = require('./db/database');
 // Crea una instancia de la aplicación
 const app = express();
 
-// Define un puerto
-const PORT = process.env.PORT || 3000;
-
 // Middleware para procesar JSON
 app.use(express.json());
-app.use(dotenv.config());
+dotenv.config();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+// Define un puerto
+const PORT = process.env.PORT;
 
 //Importa rutas de los controladores del api
 const apiroutes = require('./Routes/api.routes');
