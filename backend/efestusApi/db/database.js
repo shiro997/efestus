@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 
 const db = async ()=> {
-  await mongoose.connect('mongodb+srv://Shiro997-Yggdrasil:kS8nCrUM8L3kMnFB@cluster0.eabutku.mongodb.net/', {
+  await mongoose.connect('mongodb+srv://Shiro997-Yggdrasil:kS8nCrUM8L3kMnFB@cluster0.eabutku.mongodb.net/efestus', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }).then(()=>{
